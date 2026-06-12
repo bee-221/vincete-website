@@ -2,26 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply font-body font-light antialiased bg-off-white text-dark overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  *:focus-visible {
+    outline: 1px solid #c9a96e;
+    outline-offset: 2px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Section utilities */
+  .section-padding {
+    @apply py-[120px] px-[100px];
+  }
+  @media (max-width: 900px) {
+    .section-padding {
+      @apply py-[80px] px-7;
+    }
+  }
+
+  .container-content {
+    @apply max-w-content mx-auto w-full;
+  }
+
+  /* Section label with line prefix */
+  .section-label {
+    @apply flex items-center gap-4 text-accent font-body font-light mb-5;
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+  .section-label::before {
+    content: '';
+    @apply inline-block h-px bg-accent flex-shrink-0;
+    width: 32px;
+  }
+  .section-label.no-line::before {
+    display: none;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-block bg-charcoal text-white font-body font-light transition-all duration-300;
+    padding: 16px 40px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+  }
+  .btn-primary:hover {
+    @apply bg-accent;
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    @apply inline-block font-body font-light text-dark transition-all duration-300 border-b border-mid;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 4px;
+  }
+  .btn-ghost:hover {
+    @apply text-accent border-accent;
+  }
+
+  .btn-ghost-light {
+    @apply inline-block font-body font-light text-white transition-all duration-300;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+  .btn-ghost-light:hover {
+    @apply text-accent;
+    border-bottom-color: #c9a96e;
+  }
+
+  /* Outline dark (kept for FAQ CTA compatibility) */
+  .btn-outline-dark {
+    @apply btn-ghost;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  /* italic accent text */
+  .italic-accent {
+    @apply italic text-accent;
   }
 }
