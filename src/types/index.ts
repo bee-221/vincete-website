@@ -11,10 +11,7 @@ export type PortfolioCategory =
   | "all"
   | "wedding"
   | "nikkah"
-  | "corporate"
-  | "birthday"
-  | "backdrop"
-  | "floral";
+  | "intimate";
 
 export interface PortfolioItem {
   id: string;

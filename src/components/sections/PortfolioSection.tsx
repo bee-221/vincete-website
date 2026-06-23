@@ -15,11 +15,8 @@ import { cn } from "@/lib/utils";
 const categories: { label: string; value: PortfolioCategory }[] = [
   { label: "All", value: "all" },
   { label: "Weddings", value: "wedding" },
-  { label: "Nikkah / Walima", value: "nikkah" },
-  { label: "Floral", value: "floral" },
-  { label: "Backdrops", value: "backdrop" },
-  { label: "Birthdays", value: "birthday" },
-  { label: "Corporate", value: "corporate" },
+  { label: "Nikkah", value: "nikkah" },
+  { label: "Intimate Events", value: "intimate" },
 ];
 
 export default function PortfolioSection() {
