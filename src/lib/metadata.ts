@@ -61,9 +61,6 @@ export const siteMetadata: Metadata = {
     },
   },
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ??
-      (process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "https://vinceteevents.com")
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://vincete-website.vercel.app"
   ),
 };
