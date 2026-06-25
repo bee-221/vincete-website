@@ -144,10 +144,8 @@ export default function ContactForm() {
     const errs = validate(form);
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setStatus("submitting");
-    const id = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-    if (!id) { setTimeout(() => setStatus("success"), 600); return; }
     try {
-      const res = await fetch(`https://formspree.io/f/${id}`, {
+      const res = await fetch("https://formspree.io/f/xgobzejb", {
         method: "POST",
         headers: { Accept: "application/json", "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, servicesRequired: form.servicesRequired.join(", ") }),
@@ -319,8 +317,8 @@ export default function ContactForm() {
             style={{ fontSize: "12px", color: "#f87171" }}
           >
             Something went wrong. Please email us at{" "}
-            <a href="mailto:hello@houseofballoonsldn.com" className="underline">
-              hello@houseofballoonsldn.com
+            <a href="mailto:hello@vinceteevents.com" className="underline">
+              hello@vinceteevents.com
             </a>
           </motion.p>
         )}
