@@ -1,7 +1,7 @@
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/ui/ContactForm";
-import { InstagramIcon } from "@/components/ui/SocialIcons";
+import { InstagramIcon, TikTokIcon } from "@/components/ui/SocialIcons";
 import Link from "next/link";
 
 const MailIcon = () => (
@@ -22,14 +22,20 @@ const contactItems = [
   {
     icon: <MailIcon />,
     label: "Email",
-    value: "hello@houseofballoonsldn.com",
-    href: "mailto:hello@houseofballoonsldn.com",
+    value: "hello@vinceteevents.com",
+    href: "mailto:hello@vinceteevents.com",
   },
   {
-    icon: <InstagramIcon className="w-3.5 h-3.5" />,
+    icon: <InstagramIcon className="w-3.5 h-3.5" style={{ color: "#c9a96e" }} />,
     label: "Instagram",
     value: "@vinceteevents",
     href: "https://instagram.com/vinceteevents",
+  },
+  {
+    icon: <TikTokIcon className="w-3.5 h-3.5" style={{ color: "#c9a96e" }} />,
+    label: "TikTok",
+    value: "@vincete.events",
+    href: "https://tiktok.com/@vincete.events",
   },
   {
     icon: <PinIcon />,

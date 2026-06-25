@@ -60,7 +60,5 @@ export const siteMetadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://vincete-website.vercel.app"
-  ),
+  metadataBase: new URL("https://vinceteevents.com"),
 };

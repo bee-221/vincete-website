@@ -43,7 +43,7 @@ export default function Footer() {
             <TikTokIcon className="w-4 h-4" />
           </Link>
           <Link
-            href="mailto:hello@houseofballoonsldn.com"
+            href="mailto:hello@vinceteevents.com"
             aria-label="Email Vincete Events"
             className="transition-colors duration-200 hover:text-accent"
             style={{ color: "rgba(255,255,255,0.4)" }}
@@ -61,14 +61,14 @@ export default function Footer() {
             © {new Date().getFullYear()} Vincete Events
           </p>
           <Link
-            href="#"
+            href="/privacy"
             className="font-body font-light transition-colors duration-200 hover:text-white/50"
             style={{ fontSize: "10px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.2)" }}
           >
             Privacy
           </Link>
           <Link
-            href="#"
+            href="/terms"
             className="font-body font-light transition-colors duration-200 hover:text-white/50"
             style={{ fontSize: "10px", letterSpacing: "0.1em", color: "rgba(255,255,255,0.2)" }}
           >
