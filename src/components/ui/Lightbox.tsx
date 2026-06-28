@@ -59,7 +59,7 @@ export default function Lightbox({
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 md:top-6 md:right-6 text-ivory/70 hover:text-ivory transition-colors duration-200 z-10"
+          className="absolute top-3 right-3 md:top-6 md:right-6 text-ivory/70 hover:text-ivory transition-colors duration-200 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
           aria-label="Close lightbox"
         >
           <X size={28} />
@@ -72,7 +72,7 @@ export default function Lightbox({
               e.stopPropagation();
               onPrev();
             }}
-            className="absolute left-4 md:left-8 text-ivory/70 hover:text-ivory transition-colors duration-200 z-10 p-2"
+            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 text-ivory/70 hover:text-ivory transition-colors duration-200 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Previous image"
           >
             <ChevronLeft size={36} />
@@ -105,7 +105,7 @@ export default function Lightbox({
               e.stopPropagation();
               onNext();
             }}
-            className="absolute right-4 md:right-8 text-ivory/70 hover:text-ivory transition-colors duration-200 z-10 p-2"
+            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 text-ivory/70 hover:text-ivory transition-colors duration-200 z-10 min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Next image"
           >
             <ChevronRight size={36} />

@@ -26,8 +26,8 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
     <motion.div
       whileHover={{ backgroundColor: "#1a1714" }}
       transition={{ duration: 0.4 }}
-      className="bg-white relative overflow-hidden group"
-      style={{ padding: "52px 48px", cursor: "default" }}
+      className="bg-white relative overflow-hidden group py-8 px-6 md:py-10 md:px-10 lg:py-[52px] lg:px-[48px]"
+      style={{ cursor: "default" }}
     >
       {/* Gold underline on hover */}
       <motion.div

@@ -7,14 +7,13 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="bg-off-white"
-      style={{ padding: "120px 100px" }}
+      className="bg-off-white py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="Our Services"
     >
       <div className="max-w-content mx-auto">
         {/* Header row */}
         <div
-          className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-[72px]"
+          className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-10 lg:mb-[72px]"
           style={{ gap: "24px" }}
         >
           <FadeInSection>

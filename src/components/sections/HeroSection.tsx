@@ -35,7 +35,7 @@ export default function HeroSection() {
       id="home"
     >
       {/* Left — text */}
-      <div className="flex flex-col justify-center px-10 md:px-16 lg:px-[100px] pt-[140px] pb-[100px] relative z-10">
+      <div className="flex flex-col justify-center px-5 md:px-16 lg:px-[100px] pt-[100px] pb-[60px] lg:pt-[140px] lg:pb-[100px] relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: shouldReduce ? 0 : 0.9, delay: 0.9 }}
-          className="font-body font-light leading-[2] max-w-[380px] mb-14"
+          className="font-body font-light leading-[2] max-w-full lg:max-w-[380px] mb-14"
           style={{ fontSize: "13px", letterSpacing: "0.05em", color: "#7a7068" }}
         >
           We design immersive event experiences — from florals and tablescapes
@@ -86,7 +86,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: shouldReduce ? 0 : 0.9, delay: 1.1 }}
-          className="flex flex-wrap items-center gap-6"
+          className="flex flex-wrap items-center gap-3 sm:gap-6"
         >
           <button
             onClick={() => scrollTo("#contact")}
@@ -126,7 +126,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right — 2×2 image grid */}
-      <div className="relative overflow-hidden h-[60vw] lg:h-auto">
+      <div className="relative overflow-hidden h-[55vw] lg:h-auto">
         <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-[3px]">
           {heroImages.map((img, i) => (
             <motion.div

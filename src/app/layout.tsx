@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 import { siteMetadata } from "@/lib/metadata";
@@ -28,6 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB" className={`${cormorant.variable} ${jost.variable}`}>
+      <head>
+        {process.env.NODE_ENV === "development" && (
+          <Script
+            src="//unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        )}
+      </head>
       <body className="antialiased bg-off-white text-dark">{children}</body>
       <GoogleAnalytics gaId="G-BW3KZVBBQ4" />
     </html>

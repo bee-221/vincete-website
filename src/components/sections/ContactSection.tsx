@@ -49,13 +49,12 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-charcoal"
-      style={{ padding: "120px 100px" }}
+      className="bg-charcoal py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="Contact and Enquiry"
     >
       <div
-        className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-2"
-        style={{ gap: "100px", alignItems: "start" }}
+        className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[100px]"
+        style={{ alignItems: "start" }}
       >
         {/* Left — info */}
         <div>

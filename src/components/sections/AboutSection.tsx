@@ -6,17 +6,16 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-white"
-      style={{ padding: "120px 100px" }}
+      className="bg-white py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="About Vincete Events"
     >
       <div
-        className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+        className="max-w-content mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center"
         style={{ ["--gap" as string]: "80px" }}
       >
         {/* Image column — overlapping layout */}
         <FadeInSection>
-        <div className="relative" style={{ height: "580px" }}>
+        <div className="relative h-[260px] sm:h-[380px] lg:h-[580px]">
           {/* Main image */}
           <div
             className="absolute bg-cream overflow-hidden"
@@ -27,7 +26,7 @@ export default function AboutSection() {
               alt="Vincete Events — bespoke floral and event decor"
               fill
               className="object-cover"
-              sizes="40vw"
+              sizes="(max-width: 1024px) 80vw, 40vw"
             />
           </div>
           {/* Accent card — overlapping bottom-right */}
@@ -54,7 +53,7 @@ export default function AboutSection() {
         </FadeInSection>
 
         {/* Text column */}
-        <div style={{ paddingRight: "20px" }}>
+        <div>
           <FadeInSection>
             <SectionHeading
               label="Our Story"
@@ -85,7 +84,7 @@ export default function AboutSection() {
 
           <FadeInSection delay={0.2}>
             <div
-              className="flex gap-12 pt-10"
+              className="flex gap-5 lg:gap-12 pt-10"
               style={{ borderTop: "1px solid #e8e4de" }}
             >
               {[
@@ -96,7 +95,7 @@ export default function AboutSection() {
                 <div key={label}>
                   <p
                     className="font-display font-light text-charcoal"
-                    style={{ fontSize: "48px", lineHeight: "1" }}
+                    style={{ fontSize: "clamp(32px, 7vw, 48px)", lineHeight: "1" }}
                   >
                     {num}
                   </p>

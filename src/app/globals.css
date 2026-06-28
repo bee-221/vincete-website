@@ -24,12 +24,7 @@
 @layer components {
   /* Section utilities */
   .section-padding {
-    @apply py-[120px] px-[100px];
-  }
-  @media (max-width: 900px) {
-    .section-padding {
-      @apply py-[80px] px-7;
-    }
+    @apply py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px];
   }
 
   .container-content {
@@ -54,13 +49,20 @@
 
   /* Buttons */
   .btn-primary {
-    @apply inline-block bg-charcoal text-white font-body font-light transition-all duration-300;
-    padding: 16px 40px;
+    @apply inline-flex items-center justify-center bg-charcoal text-white font-body font-light transition-all duration-300;
+    padding: 14px 32px;
+    min-height: 44px;
     font-size: 10px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     text-decoration: none;
     border: none;
+    touch-action: manipulation;
+  }
+  @media (min-width: 640px) {
+    .btn-primary {
+      padding: 16px 40px;
+    }
   }
   .btn-primary:hover {
     @apply bg-accent;
@@ -68,12 +70,14 @@
   }
 
   .btn-ghost {
-    @apply inline-block font-body font-light text-dark transition-all duration-300 border-b border-mid;
+    @apply inline-flex items-center font-body font-light text-dark transition-all duration-300 border-b border-mid;
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
     padding-bottom: 4px;
+    min-height: 44px;
+    touch-action: manipulation;
   }
   .btn-ghost:hover {
     @apply text-accent border-accent;

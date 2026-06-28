@@ -12,8 +12,7 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="bg-off-white"
-      style={{ padding: "120px 100px" }}
+      className="bg-off-white py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="Frequently Asked Questions"
     >
       <div className="max-w-content mx-auto">

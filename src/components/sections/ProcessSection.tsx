@@ -21,12 +21,11 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="bg-off-white"
-      style={{ padding: "120px 100px" }}
+      className="bg-off-white py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="Our Process"
     >
       <div className="max-w-content mx-auto">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-[72px] gap-6">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-10 lg:mb-[72px] gap-6">
           <FadeInSection>
             <SectionHeading
               label="How It Works"
@@ -83,7 +82,7 @@ export default function ProcessSection() {
                   </div>
                   <span
                     className="font-display font-light text-stone"
-                    style={{ fontSize: "40px", lineHeight: "1" }}
+                    style={{ fontSize: "clamp(28px, 6vw, 40px)", lineHeight: "1" }}
                   >
                     0{step.step}
                   </span>

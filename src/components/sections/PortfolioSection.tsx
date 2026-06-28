@@ -31,8 +31,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="bg-cream"
-      style={{ padding: "120px 100px" }}
+      className="bg-cream py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="Portfolio Gallery"
     >
       <div className="max-w-content mx-auto">
@@ -51,7 +50,7 @@ export default function PortfolioSection() {
 
           {/* Filter tabs */}
           <FadeInSection delay={0.1}>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex overflow-x-auto scrollbar-hide gap-2 pb-1">
               {categories.map((cat) => (
                 <button
                   key={cat.value}

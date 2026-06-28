@@ -27,12 +27,13 @@ export default function Navigation() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-400"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-400 px-5 md:px-[60px]"
       style={{
         background: isScrolled ? "rgba(250,249,247,0.95)" : "transparent",
         backdropFilter: isScrolled ? "blur(12px)" : "none",
         borderBottom: isScrolled ? "1px solid #e8e4de" : "none",
-        padding: isScrolled ? "18px 60px" : "28px 60px",
+        paddingTop: isScrolled ? "18px" : "28px",
+        paddingBottom: isScrolled ? "18px" : "28px",
         transition: "background 0.4s ease, padding 0.4s ease, border-color 0.4s ease",
       }}
     >

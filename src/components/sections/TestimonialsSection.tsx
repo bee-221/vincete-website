@@ -13,12 +13,11 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="bg-white"
-      style={{ padding: "120px 100px" }}
+      className="bg-white py-[60px] px-5 sm:py-[80px] sm:px-10 lg:py-[120px] lg:px-[100px]"
       aria-label="Client Reviews"
     >
       <div className="max-w-content mx-auto">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-[72px] gap-6">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-10 lg:mb-[72px] gap-6">
           <FadeInSection>
             <SectionHeading
               label="Kind Words"
@@ -55,8 +54,7 @@ export default function TestimonialsSection() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1] as [number,number,number,number] } },
               }}
-              className="bg-off-white"
-              style={{ padding: "48px 40px" }}
+              className="bg-off-white p-6 md:p-10 lg:py-[48px] lg:px-[40px]"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-6" aria-label={`${t.rating} out of 5 stars`}>
@@ -70,7 +68,7 @@ export default function TestimonialsSection() {
               {/* Quote */}
               <p
                 className="font-display font-light italic text-charcoal leading-[1.7] mb-8"
-                style={{ fontSize: "18px" }}
+                style={{ fontSize: "clamp(15px, 3.5vw, 18px)" }}
               >
                 &ldquo;{t.quote}&rdquo;
               </p>

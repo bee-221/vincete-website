@@ -48,7 +48,7 @@ export default function SectionHeading({
             "font-body font-light leading-[1.9] mt-6",
             centered && "mx-auto",
             light ? "text-white/50" : "text-mid",
-            "max-w-[340px]"
+            "max-w-full sm:max-w-[340px]"
           )}
           style={{ fontSize: "14px" }}
         >

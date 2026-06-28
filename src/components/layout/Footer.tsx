@@ -5,10 +5,9 @@ import { InstagramIcon, TikTokIcon } from "@/components/ui/SocialIcons";
 export default function Footer() {
   return (
     <footer
-      className="bg-charcoal"
+      className="bg-charcoal py-10 px-5 md:px-[100px]"
       style={{
         borderTop: "1px solid rgba(255,255,255,0.05)",
-        padding: "48px 100px",
       }}
     >
       <div className="max-w-content mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
